@@ -25,10 +25,11 @@ jobs:
         run: |
           python -m pip3 install -r requirements.txt
 
-        - name: Install pytest-cov
-        run: |
-          python -m pip3 install pytest-cov
 
-      - name: Run tests with coverage
+      # - name: Run tests with coverage
+      #   run: |
+      #     python -m pytest -v --cov=./ tests
+
+      - name: Run tests 
         run: |
-          python -m pytest -v --cov=./ tests
+          python -m pytest -v tests
